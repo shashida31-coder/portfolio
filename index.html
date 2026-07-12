@@ -9,336 +9,105 @@
 
     <meta
         name="description"
-        content="S Hashidaによる、フォトグラメトリ、コンピュータビジョン、SfM、SLAM、リモートセンシング、数学に関する技術情報サイトです。"
+        content="S Hashidaによる、フォトグラメトリ、コンピュータビジョン、SfM、SLAM、リモートセンシング、GIS、数学に関する技術情報サイトです。"
     >
 
     <meta name="author" content="Shusaku Hashida">
 
-    <style>
-        :root {
-            --background: #f7f8fa;
-            --surface: #ffffff;
-            --text: #1d1d1f;
-            --subtext: #5f6368;
-            --border: #e5e7eb;
-            --accent: #2563eb;
-            --accent-hover: #1d4ed8;
-            --max-width: 1080px;
-        }
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="S Hashida">
+    <meta
+        property="og:description"
+        content="フォトグラメトリ、コンピュータビジョン、SfM、SLAM、リモートセンシングで利用される数学とアルゴリズムを整理しています。"
+    >
+    <meta
+        property="og:url"
+        content="https://shashida31-coder.github.io/portfolio/"
+    >
 
-        * {
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="css/style.css">
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            background: var(--background);
-            color: var(--text);
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                "Hiragino Kaku Gothic ProN",
-                "Hiragino Sans",
-                "Yu Gothic",
-                Meiryo,
-                sans-serif;
-            line-height: 1.8;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .container {
-            width: min(calc(100% - 40px), var(--max-width));
-            margin: 0 auto;
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            border-bottom: 1px solid rgba(229, 231, 235, 0.9);
-            background: rgba(255, 255, 255, 0.88);
-            backdrop-filter: blur(16px);
-        }
-
-        .header-inner {
-            min-height: 68px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-        }
-
-        .logo {
-            font-size: 1.1rem;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            font-size: 0.95rem;
-            color: var(--subtext);
-        }
-
-        nav a:hover {
-            color: var(--text);
-        }
-
-        .hero {
-            padding: 120px 0 96px;
-            text-align: center;
-        }
-
-        .eyebrow {
-            margin-bottom: 18px;
-            color: var(--accent);
-            font-size: 0.9rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: clamp(3rem, 9vw, 6rem);
-            line-height: 1.05;
-            letter-spacing: -0.05em;
-        }
-
-        .hero-description {
-            max-width: 720px;
-            margin: 32px auto 0;
-            color: var(--subtext);
-            font-size: clamp(1.05rem, 2.2vw, 1.3rem);
-        }
-
-        .keywords {
-            margin-top: 24px;
-            color: var(--subtext);
-            font-size: 0.95rem;
-            letter-spacing: 0.03em;
-        }
-
-        .buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 14px;
-            margin-top: 40px;
-        }
-
-        .button {
-            display: inline-flex;
-            min-height: 48px;
-            align-items: center;
-            justify-content: center;
-            padding: 0 22px;
-            border: 1px solid var(--border);
-            border-radius: 999px;
-            background: var(--surface);
-            font-weight: 600;
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease,
-                background 0.2s ease;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.09);
-        }
-
-        .button-primary {
-            border-color: var(--accent);
-            background: var(--accent);
-            color: #ffffff;
-        }
-
-        .button-primary:hover {
-            background: var(--accent-hover);
-        }
-
-        section {
-            padding: 88px 0;
-        }
-
-        .section-heading {
-            max-width: 720px;
-            margin-bottom: 36px;
-        }
-
-        .section-heading h2 {
-            margin: 0 0 12px;
-            font-size: clamp(2rem, 5vw, 3rem);
-            line-height: 1.2;
-            letter-spacing: -0.035em;
-        }
-
-        .section-heading p {
-            margin: 0;
-            color: var(--subtext);
-        }
-
-        .feature {
-            padding: 48px;
-            border: 1px solid var(--border);
-            border-radius: 28px;
-            background: var(--surface);
-            box-shadow: 0 16px 45px rgba(15, 23, 42, 0.05);
-        }
-
-        .feature-label {
-            margin-bottom: 12px;
-            color: var(--accent);
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        .feature h3 {
-            margin: 0;
-            font-size: clamp(1.8rem, 4vw, 2.6rem);
-            letter-spacing: -0.03em;
-        }
-
-        .feature p {
-            max-width: 760px;
-            margin: 22px 0 0;
-            color: var(--subtext);
-        }
-
-        .feature-link {
-            display: inline-block;
-            margin-top: 28px;
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        .feature-link:hover {
-            text-decoration: underline;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 22px;
-        }
-
-        .card {
-            padding: 32px;
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            background: var(--surface);
-        }
-
-        .card h3 {
-            margin: 0 0 12px;
-            font-size: 1.25rem;
-        }
-
-        .card p {
-            margin: 0;
-            color: var(--subtext);
-        }
-
-        .about {
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 48px;
-            align-items: start;
-        }
-
-        .about-name {
-            margin: 0;
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            line-height: 1.2;
-            letter-spacing: -0.04em;
-        }
-
-        .about-text p {
-            margin-top: 0;
-            color: var(--subtext);
-        }
-
-        footer {
-            padding: 40px 0;
-            border-top: 1px solid var(--border);
-            color: var(--subtext);
-            font-size: 0.9rem;
-        }
-
-        .footer-inner {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        @media (max-width: 760px) {
-            nav {
-                display: none;
-            }
-
-            .hero {
-                padding: 88px 0 72px;
-            }
-
-            section {
-                padding: 64px 0;
-            }
-
-            .feature {
-                padding: 30px;
-                border-radius: 22px;
-            }
-
-            .grid,
-            .about {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-inner {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
     <div class="container header-inner">
-        <a class="logo" href="#">S Hashida</a>
+        <a class="site-logo" href="#top" aria-label="トップページへ戻る">
+            S Hashida
+        </a>
 
-        <nav aria-label="メインナビゲーション">
+        <nav class="desktop-nav" aria-label="メインナビゲーション">
             <a href="#series">Series</a>
             <a href="#fields">Fields</a>
             <a href="#about">About</a>
-            <a href="https://zenn.dev/s_hashida" target="_blank" rel="noopener noreferrer">
+            <a
+                href="https://zenn.dev/s_hashida"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 Zenn
             </a>
         </nav>
+
+        <div class="header-actions">
+            <button
+                class="theme-button"
+                id="themeButton"
+                type="button"
+                aria-label="表示テーマを切り替える"
+            >
+                <span class="theme-icon" aria-hidden="true">◐</span>
+            </button>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="メニューを開く"
+                aria-expanded="false"
+                aria-controls="mobileNav"
+            >
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </div>
+
+    <nav
+        class="mobile-nav"
+        id="mobileNav"
+        aria-label="スマートフォン用ナビゲーション"
+    >
+        <a href="#series">Series</a>
+        <a href="#fields">Fields</a>
+        <a href="#about">About</a>
+        <a
+            href="https://zenn.dev/s_hashida"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Zenn
+        </a>
+    </nav>
 </header>
 
-<main>
+<main id="top">
 
     <section class="hero">
-        <div class="container">
-            <div class="eyebrow">Photogrammetry & Mathematics</div>
+        <div class="hero-decoration hero-decoration-one"></div>
+        <div class="hero-decoration hero-decoration-two"></div>
 
-            <h1>S Hashida</h1>
+        <div class="container hero-inner">
+            <p class="section-label">
+                Photogrammetry & Mathematics
+            </p>
+
+            <h1>
+                Mathematics for
+                <span>Photogrammetry.</span>
+            </h1>
 
             <p class="hero-description">
                 フォトグラメトリ、コンピュータビジョン、SfM、SLAM、
@@ -346,11 +115,16 @@
                 直感と数式の両面から整理しています。
             </p>
 
-            <p class="keywords">
-                Photogrammetry · Computer Vision · SfM · SLAM · Remote Sensing · GIS
-            </p>
+            <div class="hero-keywords" aria-label="専門分野">
+                <span>Photogrammetry</span>
+                <span>Computer Vision</span>
+                <span>SfM</span>
+                <span>SLAM</span>
+                <span>Remote Sensing</span>
+                <span>GIS</span>
+            </div>
 
-            <div class="buttons">
+            <div class="hero-actions">
                 <a
                     class="button button-primary"
                     href="https://zenn.dev/s_hashida"
@@ -358,122 +132,251 @@
                     rel="noopener noreferrer"
                 >
                     Zennの記事を読む
+                    <span aria-hidden="true">↗</span>
                 </a>
 
-                <a class="button" href="#series">
+                <a class="button button-secondary" href="#series">
                     シリーズを見る
                 </a>
             </div>
+
+            <a class="scroll-guide" href="#series">
+                <span>Scroll</span>
+                <span class="scroll-line"></span>
+            </a>
         </div>
     </section>
 
-    <section id="series">
+    <section class="section" id="series">
         <div class="container">
             <div class="section-heading">
-                <h2>Photogrammetry Mathematics</h2>
+                <div>
+                    <p class="section-label">Main Series</p>
 
-                <p>
-                    写真測量、コンピュータビジョン、SfM、SLAM、
-                    衛星測量に関係する数学を体系的に解説するシリーズです。
+                    <h2>フォトグラメトリ数学</h2>
+                </div>
+
+                <p class="section-introduction">
+                    写真測量、コンピュータビジョン、SfM、SLAM、衛星測量に
+                    関係する数学を、基礎から体系的に解説する技術シリーズです。
                 </p>
             </div>
 
-            <article class="feature">
-                <div class="feature-label">Main Series</div>
+            <article class="series-card">
+                <div class="series-content">
+                    <p class="card-label">
+                        Photogrammetry Mathematics
+                    </p>
 
-                <h3>フォトグラメトリ数学</h3>
+                    <h3>
+                        直感と数式で理解する<br>
+                        フォトグラメトリ
+                    </h3>
 
-                <p>
-                    座標変換、射影幾何、カメラモデル、エピポーラ幾何、
-                    Bundle Adjustment、Lie群、Visual Odometry、SLAM、
-                    RPC、RFM、オルソ補正まで、基礎から順に整理しています。
-                </p>
+                    <p>
+                        座標変換、射影幾何、カメラモデル、エピポーラ幾何、
+                        Bundle Adjustment、Lie群、Visual Odometry、SLAM、
+                        RPC、RFM、オルソ補正まで、関連する数学とアルゴリズムを
+                        順番に整理しています。
+                    </p>
 
-                <a
-                    class="feature-link"
-                    href="https://zenn.dev/s_hashida"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Zennでシリーズを読む →
-                </a>
+                    <div class="series-actions">
+                        <a
+                            class="text-link"
+                            href="https://zenn.dev/s_hashida"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            シリーズを読む
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="series-visual" aria-hidden="true">
+                    <div class="visual-grid"></div>
+
+                    <div class="visual-camera">
+                        <span class="camera-lens"></span>
+                    </div>
+
+                    <div class="visual-point visual-point-one"></div>
+                    <div class="visual-point visual-point-two"></div>
+                    <div class="visual-point visual-point-three"></div>
+
+                    <div class="visual-line visual-line-one"></div>
+                    <div class="visual-line visual-line-two"></div>
+                    <div class="visual-line visual-line-three"></div>
+                </div>
             </article>
         </div>
     </section>
 
-    <section id="fields">
+    <section class="section section-muted" id="fields">
         <div class="container">
             <div class="section-heading">
-                <h2>Fields</h2>
+                <div>
+                    <p class="section-label">Technical Fields</p>
 
-                <p>
-                    主に次の技術分野について情報発信しています。
+                    <h2>取り扱う技術分野</h2>
+                </div>
+
+                <p class="section-introduction">
+                    幾何学、最適化、画像解析、地理空間情報を中心として、
+                    理論と実務の接点を整理しています。
                 </p>
             </div>
 
-            <div class="grid">
-                <article class="card">
+            <div class="field-grid">
+                <article class="field-card">
+                    <div class="field-number">01</div>
+
                     <h3>Photogrammetry</h3>
 
                     <p>
-                        写真から位置、形状、距離を求める写真測量の考え方を扱います。
+                        写真から対象物の位置、形状、距離を求める写真測量の
+                        数学と処理手順を扱います。
                     </p>
+
+                    <ul>
+                        <li>カメラモデル</li>
+                        <li>空中三角測量</li>
+                        <li>Bundle Adjustment</li>
+                    </ul>
                 </article>
 
-                <article class="card">
+                <article class="field-card">
+                    <div class="field-number">02</div>
+
                     <h3>Computer Vision</h3>
 
                     <p>
-                        カメラモデル、特徴点、幾何推定、三次元復元を扱います。
+                        画像から幾何学的な情報を推定するための理論と
+                        アルゴリズムを扱います。
                     </p>
+
+                    <ul>
+                        <li>射影幾何</li>
+                        <li>エピポーラ幾何</li>
+                        <li>三次元復元</li>
+                    </ul>
                 </article>
 
-                <article class="card">
+                <article class="field-card">
+                    <div class="field-number">03</div>
+
                     <h3>SfM & SLAM</h3>
 
                     <p>
-                        カメラ姿勢推定、Bundle Adjustment、Factor Graph、
-                        Visual-Inertial SLAMを扱います。
+                        複数画像やセンサから、カメラの位置と三次元構造を
+                        同時に推定する技術を扱います。
                     </p>
+
+                    <ul>
+                        <li>Visual Odometry</li>
+                        <li>Factor Graph</li>
+                        <li>Visual-Inertial SLAM</li>
+                    </ul>
                 </article>
 
-                <article class="card">
+                <article class="field-card">
+                    <div class="field-number">04</div>
+
                     <h3>Remote Sensing & GIS</h3>
 
                     <p>
-                        衛星画像、RPC、RFM、オルソ補正、地理空間情報を扱います。
+                        衛星画像や地理空間情報を正確な地図座標と結び付ける
+                        技術を扱います。
                     </p>
+
+                    <ul>
+                        <li>RPC / RFM</li>
+                        <li>オルソ補正</li>
+                        <li>地理空間情報</li>
+                    </ul>
                 </article>
             </div>
         </div>
     </section>
 
-    <section id="about">
-        <div class="container about">
-            <div>
-                <p class="eyebrow">About</p>
+    <section class="section" id="about">
+        <div class="container about-layout">
+            <div class="about-heading">
+                <p class="section-label">About</p>
 
-                <h2 class="about-name">Shusaku Hashida</h2>
+                <h2>
+                    S Hashida
+                </h2>
+
+                <p class="about-name">
+                    Shusaku Hashida
+                </p>
             </div>
 
-            <div class="about-text">
+            <div class="about-content">
+                <p class="about-lead">
+                    数学と実務の間をつなぐ、技術解説を目指しています。
+                </p>
+
                 <p>
-                    数学、フォトグラメトリ、コンピュータビジョン、
+                    フォトグラメトリ、コンピュータビジョン、
                     リモートセンシング、GISを中心に技術情報を発信しています。
                 </p>
 
                 <p>
-                    複雑な数式やアルゴリズムを、可能な限り直感的に理解できる形で
-                    整理することを目指しています。
+                    複雑な数式やアルゴリズムを単に紹介するのではなく、
+                    「なぜその考え方が必要なのか」「実際の処理で何が起きているのか」
+                    を直感的に理解できる形で整理します。
+                </p>
+
+                <div class="about-links">
+                    <a
+                        class="text-link"
+                        href="https://zenn.dev/s_hashida"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Zennプロフィール
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a
+                        class="text-link"
+                        href="https://github.com/shashida31-coder"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-card">
+                <p class="section-label">Explore More</p>
+
+                <h2>
+                    技術記事を<br>
+                    Zennで公開しています。
+                </h2>
+
+                <p>
+                    フォトグラメトリ、数学、コンピュータビジョンに関する
+                    記事を継続的に追加しています。
                 </p>
 
                 <a
-                    class="feature-link"
+                    class="button button-light"
                     href="https://zenn.dev/s_hashida"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Zennプロフィールを見る →
+                    Zennを開く
+                    <span aria-hidden="true">↗</span>
                 </a>
             </div>
         </div>
@@ -481,11 +384,25 @@
 
 </main>
 
-<footer>
+<footer class="site-footer">
     <div class="container footer-inner">
-        <span>© 2026 S Hashida</span>
+        <div>
+            <p class="footer-logo">S Hashida</p>
 
-        <span>Photogrammetry · Computer Vision · Mathematics</span>
+            <p>
+                Photogrammetry · Computer Vision · Mathematics
+            </p>
+        </div>
+
+        <div class="footer-meta">
+            <p>
+                © <span id="currentYear">2026</span> S Hashida
+            </p>
+
+            <a href="#top">
+                Back to top ↑
+            </a>
+        </div>
     </div>
 </footer>
 
