@@ -701,7 +701,7 @@ html[data-theme="dark"] .hero-keywords span {
 }
 
 .contact-card h2 {
-    max-width: 800px;
+    max-width: 950px;
     margin: 0;
     font-size: clamp(2.6rem, 7vw, 5.6rem);
     line-height: 1.04;
