@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>フォトグラメトリ数学 記事一覧 | S Hashida</title>
+
+    <meta
+        name="description"
+        content="フォトグラメトリ数学シリーズの記事一覧です。カメラモデル、SfM、最適化、SLAM、空中写真測量、衛星測量を体系的に整理しています。"
+    >
+
+    <meta name="author" content="S Hashida">
+
+    <meta property="og:type" content="website">
+
+    <meta
+        property="og:title"
+        content="フォトグラメトリ数学 記事一覧 | S Hashida"
+    >
+
+    <meta
+        property="og:description"
+        content="カメラモデルからSfM、SLAM、衛星測量まで、フォトグラメトリ数学シリーズの記事をカテゴリ別に掲載しています。"
+    >
+
+    <meta
+        property="og:url"
+        content="https://shashida31-coder.github.io/portfolio/articles.html"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js" defer></script>
+    <script src="js/articles.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a
+            class="site-logo"
+            href="index.html"
+            aria-label="トップページへ戻る"
+        >
+            S Hashida
+        </a>
+
+        <nav class="desktop-nav" aria-label="メインナビゲーション">
+            <a href="index.html">Home</a>
+            <a href="articles.html">Series</a>
+            <a href="index.html#fields">Fields</a>
+            <a href="index.html#about">About</a>
+            <a
+                href="https://zenn.dev/s_hashida"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Zenn
+            </a>
+        </nav>
+
+        <div class="header-actions">
+            <button
+                class="theme-button"
+                id="themeButton"
+                type="button"
+                aria-label="表示テーマを切り替える"
+            >
+                <span class="theme-icon" aria-hidden="true">◐</span>
+            </button>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="メニューを開く"
+                aria-expanded="false"
+                aria-controls="mobileNav"
+            >
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+
+    <nav
+        class="mobile-nav"
+        id="mobileNav"
+        aria-label="スマートフォン用ナビゲーション"
+    >
+        <a href="index.html">Home</a>
+        <a href="articles.html">Series</a>
+        <a href="index.html#fields">Fields</a>
+        <a href="index.html#about">About</a>
+        <a
+            href="https://zenn.dev/s_hashida"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Zenn
+        </a>
+    </nav>
+</header>
+
+<main id="top">
+
+    <section class="articles-hero">
+        <div class="container articles-hero-inner">
+            <p class="section-label">
+                Photogrammetry Mathematics
+            </p>
+
+            <h1>フォトグラメトリ数学</h1>
+
+            <p class="articles-hero-description">
+                カメラモデル、射影幾何、SfM、最適化、SLAM、
+                空中写真測量、衛星測量までを、直感と数式の両面から
+                順番に学べる技術シリーズです。
+            </p>
+
+            <div class="article-summary">
+                <span>39 Articles</span>
+                <span>5 Categories</span>
+                <span>Updated Regularly</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section articles-section">
+        <div class="container">
+            <div class="article-category-nav" id="categoryNav">
+                <!-- JavaScriptでカテゴリボタンを表示します -->
+            </div>
+
+            <div class="article-list" id="articleList">
+                <p class="article-loading">
+                    記事一覧を読み込んでいます。
+                </p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div>
+            <p class="footer-logo">S Hashida</p>
+
+            <p>
+                Photogrammetry · Computer Vision · Mathematics
+            </p>
+        </div>
+
+        <div class="footer-meta">
+            <p>
+                © <span id="currentYear">2026</span> S Hashida
+            </p>
+
+            <a href="#top">
+                Back to top ↑
+            </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
