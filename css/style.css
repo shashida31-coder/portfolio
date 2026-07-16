@@ -438,6 +438,9 @@ html[data-theme="dark"] .hero-keywords span {
 }
 
 .series-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 28px;
     margin-top: 32px;
 }
 
@@ -984,6 +987,10 @@ html[data-theme="dark"] .hero-keywords span {
     color: var(--subtext);
     font-size: 0.8rem;
     font-weight: 700;
+}
+
+.articles-hero-actions {
+    margin-top: 28px;
 }
 
 .articles-section {
