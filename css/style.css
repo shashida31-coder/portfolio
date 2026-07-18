@@ -807,6 +807,32 @@ html[data-theme="dark"] .hero-keywords span {
     .series-visual {
         min-height: 410px;
     }
+
+    .section-heading {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .section-heading > * {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .section-heading h2 {
+        max-width: 100%;
+        font-size: clamp(2.2rem, 8vw, 3.2rem);
+        line-height: 1.15;
+        letter-spacing: -0.05em;
+        word-break: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .section-introduction {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+
 }
 
 @media (max-width: 680px) {
@@ -853,14 +879,6 @@ html[data-theme="dark"] .hero-keywords span {
 
     .section-heading {
         margin-bottom: 38px;
-    }
-
-    .section-heading h2 {
-        font-size: clamp(2.2rem, 10.5vw, 3.2rem);
-        line-height: 1.15;
-        letter-spacing: -0.05em;
-        word-break: normal;
-        overflow-wrap: anywhere;
     }
 
     .series-card,
@@ -920,11 +938,7 @@ html[data-theme="dark"] .hero-keywords span {
     }
 
     .section-heading {
-        min-width: 0;
-    }
-
-    .section-heading > * {
-        min-width: 0;
+        margin-bottom: 38px;
     }
 
 }
