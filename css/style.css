@@ -427,8 +427,9 @@ html[data-theme="dark"] .hero-keywords span {
     font-size: clamp(2.2rem, 5vw, 4.3rem);
     line-height: 1.1;
     letter-spacing: -0.055em;
-    word-break: keep-all;
-    overflow-wrap: normal;
+
+    word-break: normal;
+    overflow-wrap: anywhere;
 }
 
 .series-content > p:not(.card-label) {
@@ -823,7 +824,9 @@ html[data-theme="dark"] .hero-keywords span {
     }
 
     .hero h1 {
-        font-size: clamp(3.5rem, 18vw, 5.4rem);
+        font-size: clamp(2.5rem, 11.5vw, 3.6rem);
+        line-height: 1;
+        letter-spacing: -0.06em;
     }
 
     .hero-description {
@@ -866,7 +869,9 @@ html[data-theme="dark"] .hero-keywords span {
     }
 
     .series-content h3 {
-        font-size: 2.45rem;
+        font-size: 2.1rem;
+        word-break: normal;
+        overflow-wrap: anywhere;
     }
 
     .series-visual {
@@ -904,6 +909,10 @@ html[data-theme="dark"] .hero-keywords span {
 
     .footer-meta {
         text-align: left;
+    }
+
+    .series-content {
+        min-width: 0;
     }
 }
 
