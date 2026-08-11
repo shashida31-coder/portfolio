@@ -202,7 +202,7 @@ const articleCategories = [
         title: "写真測量・衛星測量",
         englishTitle: "Aerial & Satellite Photogrammetry",
         description:
-            "空中三角測量、絶対標定、RPC、RFM、RPC補正、オルソ補正を扱います。",
+            "空中三角測量、RPC、RFM、オルソ補正、True Ortho、オルソモザイクまでを扱います。",
         articles: [
             {
                 number: "32",
@@ -243,7 +243,33 @@ const articleCategories = [
                 number: "39",
                 title: "オルソ補正（Orthorectification）とは何か",
                 url: "https://zenn.dev/s_hashida/articles/8d289cd38fa003"
+            },
+            {
+                number: "40",
+                title: "DEM・DSM・DTMとは何か ～標高データの違いを理解する～",
+                url: "https://zenn.dev/s_hashida/articles/1e81210c77778d"
+            },
+            {
+                number: "41",
+                title: "オルソ画像はどのように作られるのか ～DEM・RPC・リサンプリングによる画像生成～",
+                url: "https://zenn.dev/s_hashida/articles/b6d4f0215d1674"
+            },
+            {
+                number: "42",
+                title: "True Ortho（トゥルーオルソ）とは何か",
+                url: "https://zenn.dev/s_hashida/articles/171c74777f12f3"
+            },
+            {
+                number: "43",
+                title: "オルソモザイク（Orthomosaic）とは何か",
+                url: "https://zenn.dev/s_hashida/articles/02c623db6d28fc"
+            },
+            {
+                number: "44",
+                title: "シームライン（Seamline）とは何か",
+                url: "https://zenn.dev/s_hashida/articles/e519433a6f5c93"
             }
+
         ]
     }
 ];
