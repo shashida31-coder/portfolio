@@ -271,8 +271,75 @@ const articleCategories = [
             }
 
         ]
+    },
+    {
+        id: "reconstruction",
+        number: "06",
+        title: "3次元復元・点群",
+        englishTitle: "Dense Reconstruction & 3D Products",
+        description:
+            "Dense Matching、視差、Dense Point Cloud、DSM、3D Mesh、Texture Mappingなど、画像から高密度な3次元成果物を生成する流れを扱います。",
+        articles: [
+            {
+                number: "45",
+                title: "Dense Matching（高密度画像マッチング）とは何か",
+                url: "https://zenn.dev/s_hashida/articles/f60a2229238093"
+            },
+            {
+                number: "46",
+                title: "Dense MatchingにおけるRectificationと視差とは何か",
+                url: "https://zenn.dev/s_hashida/articles/ca326fa7995540"
+            },
+            {
+                number: "47",
+                title: "Dense Matchingの対応点はどう選ぶ？ ～Matching CostとSAD・SSD・NCC～",
+                url: "https://zenn.dev/s_hashida/articles/be83fffa2c6b3a"
+            },
+            {
+                number: "48",
+                title: "Cost Aggregationとは？～周辺情報を使って視差を安定化する～",
+                url: "https://zenn.dev/s_hashida/articles/c88c6f19e7500c"
+            },
+            {
+                number: "49",
+                title: "SGM（Semi-Global Matching）とは？～局所的なMatchingから画像全体の整合性へ～",
+                url: "https://zenn.dev/s_hashida/articles/1b649f3643eb2e"
+            },
+            {
+                number: "50",
+                title: "Disparity MapからDense Point Cloudへ～視差から3次元座標を求める～",
+                url: "https://zenn.dev/s_hashida/articles/dbe1efe2cbedfa"
+            },
+            {
+                number: "51",
+                title: "Dense Point Cloudの外れ値除去～信頼できる3次元点を残す～",
+                url: "https://zenn.dev/s_hashida/articles/6d53f56d15c257"
+            },
+            {
+                number: "52",
+                title: "Dense Point CloudからDSMを生成する方法",
+                url: "https://zenn.dev/s_hashida/articles/09f0a94c823686"
+            },
+            {
+                number: "53",
+                title: "Dense Point Cloudから3D Meshへ～点の集合から表面を復元する～",
+                url: "https://zenn.dev/s_hashida/articles/bf5a6c69432ba7"
+            },
+            {
+                number: "54",
+                title: "Texture Mapping～3D Meshに画像を貼り付ける数学～",
+                url: "https://zenn.dev/s_hashida/articles/6df27f5989647c"
+            },
+            {
+                number: "55",
+                title: "フォトグラメトリの成果物～点・高さ・画像・3D表面の違い～",
+                url: "https://zenn.dev/s_hashida/articles/18dd0aca63b082"
+            }
+        ]
     }
 ];
+
+
 
 const categoryNav = document.getElementById("categoryNav");
 const articleList = document.getElementById("articleList");
